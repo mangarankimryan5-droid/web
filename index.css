@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    min-height: 100vh;
+  }
+  
+  .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  /* dark layer so text is readable over any video */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+  }
+  
+  .page {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 48px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contact {
+    font-size: 2rem;
+    letter-spacing: 0.3em;
+    font-weight: 600;
+  }
+  
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .name {
+    font-size: 1.5rem;
+    margin-top: 8px;
+  }
+  
+  .role {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.2s, background 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .label {
+    font-weight: 600;
+  }
+  
+  .value {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    word-break: break-all;
+    text-align: right;
+  }
+  
+  .footer {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  @media (max-width: 420px) {
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+    }
+    .card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .value {
+      text-align: left;
+    }
+  }
